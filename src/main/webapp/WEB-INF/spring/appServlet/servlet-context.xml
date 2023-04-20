@@ -28,7 +28,7 @@
 		<beans:property name="password" value="1234"></beans:property>
 	</beans:bean>
 	
-	<context:component-scan base-package="com.gyojincompany.board" />
+	<context:component-scan base-package="com.jjcompany.board" />
 	
 	
 	
