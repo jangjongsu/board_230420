@@ -36,10 +36,11 @@
 		</tr>
 		<tr>
 			<td colspan="2">
-			<input type="button" value="수정" onclick="scripr:window.location.href='modify_form?bid=${content.bid }'">
-			<input type="button" value="삭제" onclick="scripr:window.location.href='delete?bid=${content.bid }'">
-			<input type="button" value="글목록" onclick="scripr:window.location.href='list'">
-			<input type="button" value="글쓰기" onclick="scripr:window.location.href='write_From'">
+				<input type="button" value="수정" onclick="scripr:window.location.href='modify_form?bid=${content.bid }'">
+				<input type="button" value="삭제" onclick="scripr:window.location.href='delete?bid=${content.bid }'">
+				<input type="button" value="글목록" onclick="scripr:window.location.href='list'">
+				<input type="button" value="글쓰기" onclick="scripr:window.location.href='write_From'">
+				<input type="button" value="답변" onclick="scripr:window.location.href='reply_form?bid=${content.bid }'">
 			</td>
 			
 		</tr>

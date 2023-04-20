@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.jjcompany.board.command.BContentCommand;
 import com.jjcompany.board.command.BDeleteCommand;
 import com.jjcompany.board.command.BModifyCommand;
+import com.jjcompany.board.command.BReplyCommand;
 import com.jjcompany.board.command.BlistCommand;
 import com.jjcompany.board.command.BwriteCommand;
 
@@ -93,6 +94,26 @@ public class BoardController {
 		model.addAttribute("request", request);
 		
 		BDeleteCommand command = new BDeleteCommand();
+		command.execute(model);
+		
+		return "redirect:list";
+	}
+	@RequestMapping(value="/reply_form")
+	public String reply_form(HttpServletRequest request, Model model ) {
+		
+		model.addAttribute("request", request);
+		
+		BContentCommand command =new BContentCommand();
+		command.execute(model);
+		
+		return "replyForm";
+	}
+	@RequestMapping(value="/reply")
+	public String reply(HttpServletRequest request, Model model ) {
+		
+		model.addAttribute("request", request);
+		
+		BReplyCommand command = new BReplyCommand();
 		command.execute(model);
 		
 		return "redirect:list";
