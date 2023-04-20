@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.jjcompany.board.command.BCommand;
 import com.jjcompany.board.command.BContentCommand;
+import com.jjcompany.board.command.BDeleteCommand;
 import com.jjcompany.board.command.BModifyCommand;
 import com.jjcompany.board.command.BlistCommand;
 import com.jjcompany.board.command.BwriteCommand;
@@ -31,7 +32,7 @@ public class BoardController {
 		
 		
 		
-		return "redirext:list";
+		return "redirect:list";
 	
 	}
 	@RequestMapping(value="/list")
@@ -75,8 +76,16 @@ public class BoardController {
 		BModifyCommand command = new BModifyCommand();
 		command.execute(model);
 		
+		return "redirect:list";
+	}
+	@RequestMapping(value="/delete")
+	public String delete(HttpServletRequest request, Model model ) {
 		
+		model.addAttribute("request", request);
 		
-		return "redirext:list";
+		BDeleteCommand command = new BDeleteCommand();
+		command.execute(model);
+		
+		return "redirect:list";
 	}
 }

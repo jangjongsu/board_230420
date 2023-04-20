@@ -11,7 +11,7 @@
 	<hr>
 	<table border="1" cellspacing="0" cellpadding="0" width="500">
 	
-		<form action="">
+		<form action="modify">
 		<input type="hidden" name="bid" value="${content.bid }"> 
 			<tr>
 				<td>번 호</td>
