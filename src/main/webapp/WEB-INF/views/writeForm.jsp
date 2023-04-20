@@ -25,8 +25,8 @@
 			</tr>
 			<tr>
 				<td colspan="2" align="right">
-					<input type="submit" value="글입력">&nbsp;&nbsp;&nbsp;
-					<input type="button" value="글목록" onclick="script:window.location.href='list'">
+					<input type="submit" value="글입력" onclick="scripr:window.location.href='list'">&nbsp;&nbsp;&nbsp;
+					<input type="button" value="글목록" onclick="scripr:window.location.href='list'">
 				</td>
 			</tr>
 		</form>
