@@ -17,7 +17,7 @@ public class BDao {
 		
 		try {
 			Context comtext = new InitialContext();
-			dataSource = (DataSource) comtext.lookup("jdbc:com/env/jdbc/Orale11g");
+			dataSource = (DataSource) comtext.lookup("java:comp/env/jdbc/Oracle11g");
 					
 					
 		}catch(Exception e) {
