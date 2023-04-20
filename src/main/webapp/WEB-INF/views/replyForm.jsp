@@ -10,7 +10,7 @@
 	<h2>글 내용 보기</h2>
 	<hr>
 	<table border="1" cellspacing="0" cellpadding="0" width="500">
-		<form ation="reply">
+		<form action="reply">
 			<input type="hidden" name="bid" value="${content.bid }">
 			<input type="hidden" name="bgroup" value="${content.bgroup }">
 			<input type="hidden" name="bstep" value="${content.bstep }">
@@ -21,7 +21,7 @@
 			</tr>
 			<tr>
 				<td>답변자</td>
-				<td><input type="text" name="name" size="60"></td>
+				<td><input type="text" name="bname" size="60"></td>
 			</tr>
 			<tr>
 				<td>제목</td>
