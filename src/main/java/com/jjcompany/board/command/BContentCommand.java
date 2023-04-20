@@ -21,6 +21,7 @@ public class BContentCommand implements BCommand {
 		String bid = request.getParameter("bid");
 		BDao dao = new BDao();
 		BDto dto = dao.content_view(bid);
+		// dao.upHit(bid);
 		
 		model.addAttribute("content", dto);
 		

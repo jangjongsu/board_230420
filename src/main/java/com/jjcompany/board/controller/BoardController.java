@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jjcompany.board.command.BCommand;
 import com.jjcompany.board.command.BContentCommand;
 import com.jjcompany.board.command.BDeleteCommand;
 import com.jjcompany.board.command.BModifyCommand;
@@ -15,6 +14,14 @@ import com.jjcompany.board.command.BwriteCommand;
 
 @Controller
 public class BoardController {
+	
+	
+	@RequestMapping(value="/")
+	public String index() {
+		
+		return "redirect:list";
+	
+	}
 	
 	@RequestMapping(value="/write_Form")
 	public String writeForm() {
@@ -46,6 +53,8 @@ public class BoardController {
 	}
 	@RequestMapping(value="/content_view")
 	public String content_view(HttpServletRequest request, Model model) {
+		
+		//bhitUpdate();
 		
 		model.addAttribute("request", request);
 		
