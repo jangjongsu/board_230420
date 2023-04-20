@@ -39,6 +39,8 @@ public class BDao {
 			pstmt.setString(2, btitle);
 			pstmt.setString(3, bcontent);
 			
+			pstmt.executeUpdate();
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		} finally {

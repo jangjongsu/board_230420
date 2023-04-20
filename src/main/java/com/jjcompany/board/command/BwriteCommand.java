@@ -15,7 +15,7 @@ public class BwriteCommand implements BCommand {
 		// TODO Auto-generated method stub
 		
 		Map<String, Object> map = model.asMap();
-		HttpServletRequest request = (HttpServletRequest)map.get("request");
+		HttpServletRequest request = (HttpServletRequest) map.get("request");
 		
 		String bname = request.getParameter("bname");
 		String btitle = request.getParameter("btitle");
