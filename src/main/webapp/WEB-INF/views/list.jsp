@@ -19,13 +19,16 @@
 			<th>조회수</th>
 		</tr>
 		<c:forEach items="${list }" var="dto">
-		<tr>
-			<td>${dto.bid }</td>
-			<td><a href="content_view?bid=${dto.bid }">${dto.btitle }</a></td>
-			<td>${dto.bname }</td>
-			<td>${dto.bdate }</td>
-			<td>${dto.bhit }</td>
-		</tr>
+			<tr>
+				<td>${dto.bid }</td>
+					<td>
+						<c:forEach begin="1" end="${dto.bindent }"> &nbsp;&nbsp;&nbsp;</c:forEach>
+							<a href="content_view?bid=${dto.bid }">${dto.btitle }</a>
+					</td>
+				<td>${dto.bname }</td>
+				<td>${dto.bdate }</td>
+				<td>${dto.bhit }</td>
+			</tr>
 		</c:forEach>
 		<tr>
 			<td colspan="5">

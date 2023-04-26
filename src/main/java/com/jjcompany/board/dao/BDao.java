@@ -265,6 +265,9 @@ public class BDao {
 		}
 	}
 	public void reply(String bid, String bname, String btitle, String bcontent, String bgroup, String bstep, String bindent ) {
+		
+		replySort(bgroup, bstep);
+		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		
@@ -298,6 +301,40 @@ public class BDao {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	public void replySort(String bgroup, String bsetp) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+				
+				
+		try {
+			conn =dataSource.getConnection();
+			String sql = "UPDATE mvc_board SET bstep=bstep+1 WHERE bgroup=? bstep > ?";
+			pstmt= conn.prepareStatement(sql);
+			pstmt.setString(1, bgroup);
+			pstmt.setString(2, bsetp);
+			
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(pstmt != null) {
+					pstmt.close();
+				}
+				if (conn != null) {
+					conn.close();
+				}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		
 	}
 	
 }

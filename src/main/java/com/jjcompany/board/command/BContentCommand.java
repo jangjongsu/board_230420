@@ -16,7 +16,7 @@ public class BContentCommand implements BCommand {
 		// TODO Auto-generated method stub
 		Map<String, Object> map = model.asMap();
 		HttpServletRequest request = (HttpServletRequest) map.get("request");
-		// model안에 이쓴ㄴ request 객체를 빼기위해 Map 형식으로 메핑 후 Map의 키값인 request 로 request객체를 뺌
+		// model안에 있는 request 객체를 빼기위해 Map 형식으로 메핑 후 Map의 키값인 request 로 request객체를 뺌
 
 		String bid = request.getParameter("bid");
 		BDao dao = new BDao();
