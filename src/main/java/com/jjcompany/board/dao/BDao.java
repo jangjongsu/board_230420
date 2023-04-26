@@ -25,7 +25,6 @@ public class BDao {
 			Context comtext = new InitialContext();
 			dataSource = (DataSource) comtext.lookup("java:comp/env/jdbc/Oracle11g");
 					
-					
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -46,7 +45,7 @@ public class BDao {
 			pstmt.setString(3, bcontent);
 			
 			pstmt.executeUpdate();
-			
+			 
 		}catch(Exception e) {
 			e.printStackTrace();
 		} finally {
