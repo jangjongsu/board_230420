@@ -303,7 +303,7 @@ public class BDao {
 		}
 	}
 	
-	public void replySort(String bgroup, String bsetp) {
+	public void replySort(String bgroup, String bstep) {
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -312,10 +312,10 @@ public class BDao {
 				
 		try {
 			conn =dataSource.getConnection();
-			String sql = "UPDATE mvc_board SET bstep=bstep+1 WHERE bgroup=? bstep > ?";
+			String sql = "UPDATE mvc_board SET bstep=bstep+1 WHERE bgroup=? and bstep > ?";
 			pstmt= conn.prepareStatement(sql);
 			pstmt.setString(1, bgroup);
-			pstmt.setString(2, bsetp);
+			pstmt.setString(2, bstep);
 			
 			pstmt.executeUpdate();
 			
